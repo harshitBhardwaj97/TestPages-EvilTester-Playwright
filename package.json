@@ -1,0 +1,23 @@
+{
+  "name": "testpages-eviltester-playwright",
+  "version": "1.0.0",
+  "description": "Playwright Automation Framework built on TestPages website, created by EvilTester.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "keywords": [
+    "playwright",
+    "e2e-automation"
+  ],
+  "author": {
+    "name": "Harshit Bhardwaj",
+    "email": "harshitbhardwaj97@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.41.1",
+    "@types/node": "^20.11.5",
+    "allure-playwright": "^2.11.1"
+  }
+}
