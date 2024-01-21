@@ -6,6 +6,7 @@ export default class HomePage {
   readonly elementAttributesPageLink: Locator;
   readonly webDriverExamplePageLink: Locator;
   readonly tableTestPageLink: Locator;
+  readonly dynamicTableTestPageLink: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -13,6 +14,7 @@ export default class HomePage {
     this.elementAttributesPageLink = page.locator("#elementattributestest");
     this.webDriverExamplePageLink = page.locator("#webdriverexamplepage");
     this.tableTestPageLink = page.locator("#tablestest");
+    this.dynamicTableTestPageLink = page.locator("#dynamictablestest");
   }
 
   async navigateToBasicWebPage() {
@@ -33,5 +35,10 @@ export default class HomePage {
   async navigateToTableTestPage() {
     await this.page.goto("/");
     await this.tableTestPageLink.click();
+  }
+
+  async navigateToDynamicTableTestPage() {
+    await this.page.goto("/");
+    await this.dynamicTableTestPageLink.click();
   }
 }

@@ -12,8 +12,8 @@ test("Verify the main heading of Table Test Page", async ({
   const actualMainHeading = await tableTestPage.mainHeading.textContent();
 
   console.table([
-    `expectedMainHeading -> ${expectedMainHeading}`,
     `actualMainHeading -> ${actualMainHeading}`,
+    `expectedMainHeading -> ${expectedMainHeading}`,
   ]);
 
   expect(expectedMainHeading).toBe(actualMainHeading);

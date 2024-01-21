@@ -16,8 +16,8 @@ test("Verify the main heading of Element Attributes Page", async ({
     await elementAttributesPage.mainHeading.textContent();
 
   console.table([
-    `expectedMainHeading -> ${expectedMainHeading}`,
     `actualMainHeading -> ${actualMainHeading}`,
+    `expectedMainHeading -> ${expectedMainHeading}`,
   ]);
 
   expect(expectedMainHeading).toBe(actualMainHeading);

@@ -20,8 +20,8 @@ test("Verify the main heading of Web Driver Page", async ({
   const actualMainHeading = await webDriverPage.mainHeading.textContent();
 
   console.table([
-    `expectedMainHeading -> ${expectedMainHeading}`,
     `actualMainHeading -> ${actualMainHeading}`,
+    `expectedMainHeading -> ${expectedMainHeading}`,
   ]);
 
   expect(expectedMainHeading).toBe(actualMainHeading);
