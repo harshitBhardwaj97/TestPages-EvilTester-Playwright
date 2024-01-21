@@ -20,7 +20,7 @@ test("Verify the main heading of Javascript Alerts Page", async ({
   expect(expectedMainHeading).toBe(actualMainHeading);
 });
 
-test("Verify the current URL and Title of Table Test Page", async ({
+test("Verify the current URL and Title of Javascript Alerts Page", async ({
   page,
 }) => {
   const expectedURL =

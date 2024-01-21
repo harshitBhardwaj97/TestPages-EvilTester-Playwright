@@ -8,6 +8,7 @@ export default class HomePage {
   readonly tableTestPageLink: Locator;
   readonly dynamicTableTestPageLink: Locator;
   readonly javascirptAlertsPageLink: Locator;
+  readonly fakeAlertsPageLink: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -17,6 +18,7 @@ export default class HomePage {
     this.tableTestPageLink = page.locator("#tablestest");
     this.dynamicTableTestPageLink = page.locator("#dynamictablestest");
     this.javascirptAlertsPageLink = page.locator("#alerttest");
+    this.fakeAlertsPageLink = page.locator("#fakealerttest");
   }
 
   async navigateToBasicWebPage() {
@@ -47,5 +49,10 @@ export default class HomePage {
   async navigateToJavascriptAlertsPage() {
     await this.page.goto("/");
     await this.javascirptAlertsPageLink.click();
+  }
+
+  async navigateToFakeAlertsPage() {
+    await this.page.goto("/");
+    await this.fakeAlertsPageLink.click();
   }
 }
