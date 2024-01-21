@@ -80,7 +80,7 @@ test("Verify Fake Alert Box Functionality", async ({
   // Check if the "active" class is present
   const isDialogActive = classList?.includes("active") ?? false;
   expect(isDialogActive).toBe(true);
-  console.log("active class added ");
+  console.log("active class added");
 });
 
 test("Verify Modal Dialog Functionality", async ({ page, fakeAlertsPage }) => {
@@ -118,5 +118,5 @@ test("Verify Modal Dialog Functionality", async ({ page, fakeAlertsPage }) => {
   // Check if the "active" class is present
   const isDialogActive = classList?.includes("active") ?? false;
   expect(isDialogActive).toBe(true);
-  console.log("active class added ");
+  console.log("active class added");
 });

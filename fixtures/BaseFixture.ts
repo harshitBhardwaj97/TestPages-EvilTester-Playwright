@@ -7,6 +7,7 @@ import TableTestPage from "../pages/TableTestPage";
 import DynamicTableTestPage from "../pages/DynamicTableTestPage";
 import JavascriptAlertsPage from "../pages/JavascriptAlertsPage";
 import FakeAlertsPage from "../pages/FakeAlertsPage";
+import HtmlFormExamplePage from "../pages/HtmlFormExamplePage";
 
 type Pages = {
   homePage: HomePage;
@@ -17,6 +18,7 @@ type Pages = {
   dynamicTableTestPage: DynamicTableTestPage;
   javascriptAlertsPage: JavascriptAlertsPage;
   fakeAlertsPage: FakeAlertsPage;
+  htmlFormExamplePage: HtmlFormExamplePage;
 };
 
 export const test = base.extend<Pages>({
@@ -50,5 +52,9 @@ export const test = base.extend<Pages>({
 
   fakeAlertsPage: async ({ page }, use) => {
     await use(new FakeAlertsPage(page));
+  },
+
+  htmlFormExamplePage: async ({ page }, use) => {
+    await use(new HtmlFormExamplePage(page));
   },
 });

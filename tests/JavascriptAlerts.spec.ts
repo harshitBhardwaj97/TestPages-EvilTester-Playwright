@@ -53,13 +53,13 @@ test("Verify the Alert Functionality", async ({
     "You triggered and handled the alert dialog";
 
   const dialogPromise = new Promise((resolve) => {
-    page.on("dialog", (dialog) => {
+    page.on("dialog", async (dialog) => {
       console.log("Alert Message displayed successfully.");
       const actualAlertMessage = dialog.message();
 
       expect(actualAlertMessage).toBe(expectedAlertMessage);
 
-      dialog.accept();
+      await dialog.accept();
       resolve(actualAlertMessage);
     });
   });
@@ -103,7 +103,7 @@ test("Verify Confirm OK Functionality", async ({
 
     expect(actualConfirmMessage).toBe(expectedConfirmMessage);
 
-    dialog.accept();
+    await dialog.accept();
   });
 
   await javascriptAlertsPage.clickShowConfirmBoxButton();
@@ -143,7 +143,7 @@ test("Verify Confirm Dismiss Functionality", async ({
 
     expect(actualConfirmMessage).toBe(expectedConfirmMessage);
 
-    dialog.dismiss();
+    await dialog.dismiss();
   });
 
   await javascriptAlertsPage.clickShowConfirmBoxButton();
