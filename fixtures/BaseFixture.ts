@@ -5,6 +5,7 @@ import ElementAttributesPage from "../pages/ElementAttributesPage";
 import WebDriverPage from "../pages/WebDriverPage";
 import TableTestPage from "../pages/TableTestPage";
 import DynamicTableTestPage from "../pages/DynamicTableTestPage";
+import JavascriptAlertsPage from "../pages/JavascriptAlertsPage";
 
 type Pages = {
   homePage: HomePage;
@@ -13,6 +14,7 @@ type Pages = {
   webDriverPage: WebDriverPage;
   tableTestPage: TableTestPage;
   dynamicTableTestPage: DynamicTableTestPage;
+  javascriptAlertsPage: JavascriptAlertsPage;
 };
 
 export const test = base.extend<Pages>({
@@ -38,5 +40,9 @@ export const test = base.extend<Pages>({
 
   dynamicTableTestPage: async ({ page }, use) => {
     await use(new DynamicTableTestPage(page));
+  },
+
+  javascriptAlertsPage: async ({ page }, use) => {
+    await use(new JavascriptAlertsPage(page));
   },
 });

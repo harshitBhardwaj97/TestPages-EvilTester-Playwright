@@ -5,7 +5,7 @@ test.beforeEach(async ({ homePage }) => {
   await homePage.navigateToDynamicTableTestPage();
 });
 
-test("Verify the main heading of Table Test Page", async ({
+test("Verify the main heading of Dynamic Table Test Page", async ({
   tableTestPage,
 }) => {
   const expectedMainHeading = "Dynamic HTML TABLE Tag";
@@ -19,7 +19,7 @@ test("Verify the main heading of Table Test Page", async ({
   expect(expectedMainHeading).toBe(actualMainHeading);
 });
 
-test("Verify the current URL and Title of Table Test Page", async ({
+test("Verify the current URL and Title of Dynamic Table Test Page", async ({
   page,
 }) => {
   const expectedURL =
