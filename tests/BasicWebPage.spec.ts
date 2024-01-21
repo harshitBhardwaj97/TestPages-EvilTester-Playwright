@@ -5,7 +5,7 @@ test.beforeEach(async ({ homePage }) => {
   await homePage.navigateToBasicWebPage();
 });
 
-test("Verify the current URL and Title", async ({ page }) => {
+test("Verify the current URL and Title of Basic Web Page", async ({ page }) => {
   const expectedURL =
     "https://testpages.eviltester.com/styled/basic-web-page-test.html";
   const expectedTitle = "Basic Web Page Title";
@@ -26,7 +26,7 @@ test("Verify the current URL and Title", async ({ page }) => {
   expect(actualURL).toBe(expectedURL);
 });
 
-test("Verify the main heading", async ({ basicWebPage }) => {
+test("Verify the main heading of Basic Web Page", async ({ basicWebPage }) => {
   const expectedHeading = "Basic Web Page Example";
 
   const actualHeading = await basicWebPage.mainHeading.innerText();

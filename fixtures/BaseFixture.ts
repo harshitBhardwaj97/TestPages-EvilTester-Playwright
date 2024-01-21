@@ -3,12 +3,14 @@ import HomePage from "../pages/HomePage";
 import BasicWebPage from "../pages/BasicWebPage";
 import ElementAttributesPage from "../pages/ElementAttributesPage";
 import WebDriverPage from "../pages/WebDriverPage";
+import TableTestPage from "../pages/TableTestPage";
 
 type Pages = {
   homePage: HomePage;
   basicWebPage: BasicWebPage;
   elementAttributesPage: ElementAttributesPage;
   webDriverPage: WebDriverPage;
+  tableTestPage: TableTestPage;
 };
 
 export const test = base.extend<Pages>({
@@ -26,5 +28,9 @@ export const test = base.extend<Pages>({
 
   webDriverPage: async ({ page }, use) => {
     await use(new WebDriverPage(page));
+  },
+
+  tableTestPage: async ({ page }, use) => {
+    await use(new TableTestPage(page));
   },
 });

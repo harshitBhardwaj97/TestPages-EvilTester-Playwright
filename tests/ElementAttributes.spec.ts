@@ -5,6 +5,24 @@ test.beforeEach(async ({ homePage }) => {
   await homePage.navigateToElementAttributesPage();
 });
 
+test("Verify the main heading of Element Attributes Page", async ({
+  elementAttributesPage,
+}) => {
+  const expectedMainHeading = "Element Attributes Examples";
+
+  await expect(elementAttributesPage.mainHeading).toBeVisible();
+
+  const actualMainHeading =
+    await elementAttributesPage.mainHeading.textContent();
+
+  console.table([
+    `expectedMainHeading -> ${expectedMainHeading}`,
+    `actualMainHeading -> ${actualMainHeading}`,
+  ]);
+
+  expect(expectedMainHeading).toBe(actualMainHeading);
+});
+
 test("Verify the current URL and Title of Element Attributes Page", async ({
   page,
 }) => {

@@ -5,12 +5,14 @@ export default class HomePage {
   readonly basicWebPageExampleLink: Locator;
   readonly elementAttributesPageLink: Locator;
   readonly webDriverExamplePageLink: Locator;
+  readonly tableTestPageLink: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.basicWebPageExampleLink = page.locator("#basicpagetest");
     this.elementAttributesPageLink = page.locator("#elementattributestest");
     this.webDriverExamplePageLink = page.locator("#webdriverexamplepage");
+    this.tableTestPageLink = page.locator("#tablestest");
   }
 
   async navigateToBasicWebPage() {
@@ -26,5 +28,10 @@ export default class HomePage {
   async navigateToWebDriverPage() {
     await this.page.goto("/");
     await this.webDriverExamplePageLink.click();
+  }
+
+  async navigateToTableTestPage() {
+    await this.page.goto("/");
+    await this.tableTestPageLink.click();
   }
 }

@@ -10,6 +10,23 @@ test.beforeEach(async ({ homePage }) => {
   await homePage.navigateToWebDriverPage();
 });
 
+test("Verify the main heading of Web Driver Page", async ({
+  webDriverPage,
+}) => {
+  const expectedMainHeading = "Example Page Heading One";
+
+  await expect(webDriverPage.mainHeading).toBeVisible();
+
+  const actualMainHeading = await webDriverPage.mainHeading.textContent();
+
+  console.table([
+    `expectedMainHeading -> ${expectedMainHeading}`,
+    `actualMainHeading -> ${actualMainHeading}`,
+  ]);
+
+  expect(expectedMainHeading).toBe(actualMainHeading);
+});
+
 test("Verify the current URL and Title of Web Driver Page", async ({
   page,
 }) => {
